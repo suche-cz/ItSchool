@@ -1,0 +1,31 @@
+vytvoření složky projektu
+
+vytvoření venv
+python -m venv nazev_prostredi
+python -m venv .env
+
+aktivace
+.\.env\scripts\activate
+
+.\.env\scripts\deactivate
+
+mac:
+source .\.env\bin\activate
+
+source .\.env\bin\deactivate
+
+kontrola zda to běží z env
+python
+>>> import sys; sys.executable
+exit()
+
+pip install django
+pip install Pillow
+pip install django-debug-toolbar
+
+django-admin startproject _project .
+
+python manage.py startapp school
+
+python manage.py runserver
+
