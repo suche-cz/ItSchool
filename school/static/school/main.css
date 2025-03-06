@@ -1,0 +1,21 @@
+body {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+ul li a {
+    display: flex;
+    gap: 1em;
+}
+
+ul li a img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+}
