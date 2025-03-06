@@ -10,4 +10,3 @@ urlpatterns = [
     path('students/', views.students),
     path('courses/', views.courses),
 ]
-
