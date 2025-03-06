@@ -1,17 +1,12 @@
 django:
 https://docs.djangoproject.com/en/5.1/topics/
 
-request / response headers
-template extension
-media
-static - js, css, icony, loga
 
-app/static/app/main.css
-app/templates/app/index.html
-
-cache
 reverse
 generic view + slug
+django-debug-toolbar
+request / response headers
+cache
 
 
 python:
