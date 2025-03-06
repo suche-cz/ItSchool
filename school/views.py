@@ -1,3 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 
-# Create your views here.
+# views.py
+
+def index(request):
+    return render(request, 'school/index.html')
+
+def students(request):
+    return render(request, 'school/students.html')
+
+def courses(request):
+    return render(request, 'school/courses.html')
