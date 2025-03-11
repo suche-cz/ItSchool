@@ -3,10 +3,25 @@ https://docs.djangoproject.com/en/5.1/topics/
 
 
 reverse
-generic view + slug
+
+{% url 'nazev_view' pk=10 text='hello' %}
+reverse('nazev_view', kwargs={'pk': 10, 'text': 'hello'})
+
+path('cesta/<int:pk>/<str:text>/new/', name='nazev_view'),
+
+'/cesta/10/hello/new/'
+
+generic view
+https://docs.djangoproject.com/en/5.1/topics/class-based-views/
+https://ccbv.co.uk/
+
 django-debug-toolbar
+https://django-debug-toolbar.readthedocs.io/en/latest/installation.html
+
 request / response headers
+
 cache
+
 
 
 python:
