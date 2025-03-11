@@ -19,9 +19,7 @@ django-debug-toolbar
 https://django-debug-toolbar.readthedocs.io/en/latest/installation.html
 
 request / response headers
-
 cache
-
 
 
 python:

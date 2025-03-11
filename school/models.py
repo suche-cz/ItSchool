@@ -26,5 +26,7 @@ class Course(models.Model):
         return self.name
     
     def get_absolute_url(self):
+        # path('courses/<int:pk>/', name='course_detail')
+        # /courses/1/
         return reverse('school:course_detail', kwargs={"pk": self.pk})
     

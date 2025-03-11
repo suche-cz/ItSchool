@@ -1,4 +1,4 @@
-ul {
+ul.list {
     max-width: 900px;
     margin: 2em 0 3em 0;
     padding: 0;
@@ -7,16 +7,16 @@ ul {
     gap: 1em;
 }
 
-ul li {
+ul.list li {
     list-style-type: none;
 }
 
-ul li a {
+ul.list li a {
     display: flex;
     gap: 1em;
 }
 
-ul li a img {
+ul.list li a img {
     border-radius: 50%;
     width: 64px;
     height: 64px;

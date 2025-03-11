@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark" >
     <link rel="stylesheet" href="{% static 'school/pico.min.css' %}">
-    <link rel="stylesheet" href="{% static 'school/main.css' %}">
+    <link rel="stylesheet" href="{% static 'school/main.css' %}?v=1">
     <title>{% block school_title %}{% endblock %}</title>
     <meta name="description" content="{% block school_desc %}{% endblock %}">
   </head>
   <body>
     <main class="container">
+      <nav>
+        <ul>
+          <li><a href="{% url 'school:index' %}">Home</a></li>
+          <li><a href="{% url 'school:courses' %}">Courses</a></li>
+          <li><a href="{% url 'school:students' %}">Students</a></li>
+        </ul>
+      </nav>
+
       {% block school_base %}{% endblock %}
     </main>
   </body>

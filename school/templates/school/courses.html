@@ -6,19 +6,40 @@
 {% block school_base %}
     <h1>Courses</h1>
 
-    <ul>
-        {% for course in courses %}
+    <ul class="list">
+        {% for course in object_list %}
         <li>
-            <a href="#">
+            {# hello ... #}
+
+            {% comment %}
+            {% url 'school:course_detail' pk=course.id %}
+            {% endcomment %}
+            <a href="{{ course.get_absolute_url }}">
                 {% if course.image %}
-                <img src="{{ course.image.url }}" alt="">
+                <img src="{{ course.image.url }}" alt="" loading="lazy">
                 {% else %}
-                <img src="https://picsum.photos/100?{{ course.id }}" alt="">
+                <img src="https://picsum.photos/100" alt="" loading="lazy">
                 {% endif %}
-                <h2>{{ course.name }}</h2>
+                <h2>{{ course.name }} - {{ course.lector.username }}</h2>
             </a>
         </li>
         {% endfor %}
     </ul>
+
+    {% if is_paginated %}
+        <nav>
+            <ul>
+                {% for number in paginator_range %}
+                    <li>
+                        {% if number != paginator.ELLIPSIS %}
+                        <a href="{{ request.path }}?page={{ number }}">{{ number }}</a>
+                        {% else %}
+                        {{ number }}
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    {% endif %}
 
 {% endblock %}
