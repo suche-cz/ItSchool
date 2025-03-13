@@ -23,11 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ym6j0zk3cpgwiix)igy5qnf%64%u77ajfwf!%+1^7j^#fpf!@d'
 
 # python manage.py runserver --settings=_project.settings_prod
+# python manage.py makemigrations --settings=_project.settings_prod
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.eu.pythonanywhere.com', '127.0.0.1']
+ALLOWED_HOSTS = ['.pythonanywhere.com', '127.0.0.1']
 INTERNAL_IPS = []
 
 
